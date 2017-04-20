@@ -1,0 +1,11 @@
+table.week{
+  width: 600px;
+  border: solid black 1px;
+}
+
+span.day {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  border-top: solid black 1px;
+}
