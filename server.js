@@ -1,21 +1,35 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+const jsonfile = require('jsonfile');
+
+const jsonfileName = "ugeplan.json";
 
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended:true}))
 
 app.get('/', function (req, res) {
-  res.render('index')
+  jsonfile.readFile(jsonfileName, function(err, obj){
+    if (err) res.send(err)
+    res.render('index', {week:obj});
+  })
 });
 app.get('/edit', function (req, res) {
-  res.render('form')
+  jsonfile.readFile(jsonfileName, function(err, obj){
+    if (err) res.send(err)
+    res.render('form', {week:obj});
+  })
 });
 
 app.post('/save', function(req, res){
-  console.log(req);
-  res.send("Attempted to POST data")
+  jsonfile.writeFile(jsonfileName, req.body, {spaces: 2}, function(err){
+    if (err) res.send(err);
+  });
+  res.redirect("/")
 })
 
 app.listen(3000);

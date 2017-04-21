@@ -7,7 +7,6 @@
   </head>
   <body>
     <h1 class="title">Afhentninger denne uge</h1>
-
     <table class="week">
       <thead>
         <tr>
@@ -18,43 +17,43 @@
         <tr>
           <td>
             <span class="day">Mandag</span>
-            <p>Liste 1</p>
+            <p><%- week.mandag.replace(/\n/g, '<br/>')%></p>
           </td>
         </tr>
         <tr>
           <td>
             <span class="day">Tirsdag</span>
-            <p>Liste 1</p>
+            <p><%- week.tirsdag.replace(/\n/g, '<br/>')%></p>
           </td>
         </tr>
         <tr>
           <td>
             <span class="day">Onsdag</span>
-            <p>Liste 1</p>
+            <p><%- week.onsdag.replace(/\n/g, '<br/>')%></p>
           </td>
         </tr>
         <tr>
           <td>
             <span class="day">Torsdag</span>
-            <p>Liste 1</p>
+            <p><%- week.torsdag.replace(/\n/g, '<br/>')%></p>
           </td>
         </tr>
         <tr>
           <td>
             <span class="day">Fredag</span>
-            <p>Liste 1</p>
+            <p><%- week.fredag.replace(/\n/g, '<br/>')%></p>
           </td>
         </tr>
         <tr>
           <td>
             <span class="day">Lørdag</span>
-            <p>Liste 1</p>
+            <p><%- week.lordag.replace(/\n/g, '<br/>')%></p>
           </td>
         </tr>
         <tr>
           <td>
             <span class="day">Søndag</span>
-            <p>Liste 1</p>
+            <p><%- week.sondag.replace(/\n/g, '<br/>')%></p>
           </td>
         </tr>
       </tbody>

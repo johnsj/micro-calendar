@@ -7,8 +7,8 @@
   </head>
   <body>
     <h1 class="title">Afhentninger denne uge</h1>
-    <form class="" action="index.html" method="post">
-
+    <form class="" action="/save" method="post">
+      <input type="submit" value="Gem">
       <table class="week">
         <thead>
           <tr>
@@ -19,43 +19,43 @@
           <tr>
             <td>
               <span class="day">Mandag</span>
-              <textarea name="name" rows="8" cols="80"></textarea>
+              <textarea name="mandag" rows="8" cols="80"><%- week.mandag%></textarea>
             </td>
           </tr>
           <tr>
             <td>
               <span class="day">Tirsdag</span>
-              <textarea name="name" rows="8" cols="80"></textarea>
+              <textarea name="tirsdag" rows="8" cols="80"><%- week.tirsdag%></textarea>
             </td>
           </tr>
           <tr>
             <td>
               <span class="day">Onsdag</span>
-              <textarea name="name" rows="8" cols="80"></textarea>
+              <textarea name="onsdag" rows="8" cols="80"><%- week.onsdag%></textarea>
             </td>
           </tr>
           <tr>
             <td>
               <span class="day">Torsdag</span>
-              <textarea name="name" rows="8" cols="80"></textarea>
+              <textarea name="torsdag" rows="8" cols="80"><%- week.torsdag%></textarea>
             </td>
           </tr>
           <tr>
             <td>
               <span class="day">Fredag</span>
-              <textarea name="name" rows="8" cols="80"></textarea>
+              <textarea name="fredag" rows="8" cols="80"><%- week.fredag%></textarea>
             </td>
           </tr>
           <tr>
             <td>
               <span class="day">Lørdag</span>
-              <textarea name="name" rows="8" cols="80"></textarea>
+              <textarea name="lordag" rows="8" cols="80"><%- week.lordag%></textarea>
             </td>
           </tr>
           <tr>
             <td>
               <span class="day">Søndag</span>
-              <textarea name="name" rows="8" cols="80"></textarea>
+              <textarea name="sondag" rows="8" cols="80"><%- week.sondag%></textarea>
             </td>
           </tr>
         </tbody>
