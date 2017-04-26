@@ -15,13 +15,13 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.get('/', function (req, res) {
   jsonfile.readFile(jsonfileName, function(err, obj){
     if (err) res.send(err)
-    res.render('index', {week:obj});
+    res.render('index.ejs', {week:obj});
   })
 });
 app.get('/edit', function (req, res) {
   jsonfile.readFile(jsonfileName, function(err, obj){
     if (err) res.send(err)
-    res.render('form', {week:obj});
+    res.render('form.ejs', {week:obj});
   })
 });
 
