@@ -28,8 +28,8 @@ app.get('/edit', function (req, res) {
 app.post('/save', function(req, res){
   jsonfile.writeFile(jsonfileName, req.body, {spaces: 2}, function(err){
     if (err) res.send(err);
+    res.redirect("/")
   });
-  res.redirect("/")
 })
 
 app.listen(3000);
