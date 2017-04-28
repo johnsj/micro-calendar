@@ -12,16 +12,24 @@ app.use(express.static('public'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 
+Date.prototype.getWeekNumber = function(){
+    var d = new Date(+this);
+    d.setHours(0,0,0,0);
+    d.setDate(d.getDate()+4-(d.getDay()||7));
+    return Math.ceil((((d-new Date(d.getFullYear(),0,1))/8.64e7)+1)/7);
+};
+
 app.get('/', function (req, res) {
+
   jsonfile.readFile(jsonfileName, function(err, obj){
     if (err) res.send(err)
-    res.render('index.ejs', {week:obj});
+    res.render('index.ejs', {week:obj, weeknumber: new Date().getWeekNumber()});
   })
 });
 app.get('/edit', function (req, res) {
   jsonfile.readFile(jsonfileName, function(err, obj){
     if (err) res.send(err)
-    res.render('form.ejs', {week:obj});
+    res.render('form.ejs', {week:obj, weeknumber: new Date().getWeekNumber()});
   })
 });
 
