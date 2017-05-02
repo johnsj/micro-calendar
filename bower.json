@@ -1,0 +1,22 @@
+{
+  "name": "micro_calender",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "John Schwartz Jacobsen <john@johnschwartz.dk>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/johnsj/micro-calendar",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "markdown-it": "^8.3.1"
+  }
+}

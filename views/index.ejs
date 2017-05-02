@@ -18,47 +18,56 @@
         <tr>
           <td>
             <span class="day">Mandag</span>
-            <p><%- week.mandag.replace(/\n/g, '<br/>')%></p>
+            <p class="dayText"><%- week.mandag.replace(/\n/g, '<br/>')%></p>
           </td>
         </tr>
         <tr>
           <td>
             <span class="day">Tirsdag</span>
-            <p><%- week.tirsdag.replace(/\n/g, '<br/>')%></p>
+            <p class="dayText"><%- week.tirsdag.replace(/\n/g, '<br/>')%></p>
           </td>
         </tr>
         <tr>
           <td>
             <span class="day">Onsdag</span>
-            <p><%- week.onsdag.replace(/\n/g, '<br/>')%></p>
+            <p class="dayText"><%- week.onsdag.replace(/\n/g, '<br/>')%></p>
           </td>
         </tr>
         <tr>
           <td>
             <span class="day">Torsdag</span>
-            <p><%- week.torsdag.replace(/\n/g, '<br/>')%></p>
+            <p class="dayText"><%- week.torsdag.replace(/\n/g, '<br/>')%></p>
           </td>
         </tr>
         <tr>
           <td>
             <span class="day">Fredag</span>
-            <p><%- week.fredag.replace(/\n/g, '<br/>')%></p>
+            <p class="dayText"><%- week.fredag.replace(/\n/g, '<br/>')%></p>
           </td>
         </tr>
         <tr>
           <td>
             <span class="day">Lørdag</span>
-            <p><%- week.lordag.replace(/\n/g, '<br/>')%></p>
+            <p class="dayText"><%- week.lordag.replace(/\n/g, '<br/>')%></p>
           </td>
         </tr>
         <tr>
           <td>
             <span class="day">Søndag</span>
-            <p><%- week.sondag.replace(/\n/g, '<br/>')%></p>
+            <p class="dayText"><%- week.sondag.replace(/\n/g, '<br/>')%></p>
           </td>
         </tr>
       </tbody>
     </table>
 
   </body>
+  <script src="/bower_components/jquery/dist/jquery.min.js" charset="utf-8" type="text/javascript"></script>
+  <script src="/bower_components/markdown-it/dist/markdown-it.min.js" charset="utf-8" type="text/javascript"></script>
+  <script type="text/javascript">
+    var md = window.markdownit();
+    $('.dayText').each(function(){
+      var result = md.renderInline($(this).text());
+      $(this).html(result);
+    });
+  </script>
 </html>

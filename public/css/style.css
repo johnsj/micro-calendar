@@ -7,6 +7,12 @@ table.week{
 table thead tr td, h1.title{
   text-align: center;
 }
+.ta-wrapper{
+  margin-right: 5px;
+}
+.ta-wrapper textarea {
+  width: 100%;
+}
 
 span.day {
   display: inline-block;

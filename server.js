@@ -9,6 +9,7 @@ app.set('views', './views');
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'))
+app.use('/bower_components',express.static('bower_components'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 

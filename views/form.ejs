@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Afhentninger denne uge</title>
+    <title>Ugeplan</title>
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <h1 class="title">Afhentninger denne uge</h1>
+    <h1 class="title">Uge Plan</h1>
     <form class="" action="/save" method="post">
       <input type="submit" value="Gem">
       <table class="week">
@@ -19,43 +19,57 @@
           <tr>
             <td>
               <span class="day">Mandag</span>
-              <textarea name="mandag" rows="8" cols="80"><%- week.mandag%></textarea>
+              <div class="ta-wrapper">
+                <textarea name="mandag" rows="8" cols="80"><%- week.mandag%></textarea>
+              </div>
             </td>
           </tr>
           <tr>
             <td>
               <span class="day">Tirsdag</span>
-              <textarea name="tirsdag" rows="8" cols="80"><%- week.tirsdag%></textarea>
+              <div class="ta-wrapper">
+                <textarea name="tirsdag" rows="8" cols="80"><%- week.tirsdag%></textarea>
+              </div>
             </td>
           </tr>
           <tr>
             <td>
               <span class="day">Onsdag</span>
-              <textarea name="onsdag" rows="8" cols="80"><%- week.onsdag%></textarea>
+              <div class="ta-wrapper">
+                <textarea name="onsdag" rows="8" cols="80"><%- week.onsdag%></textarea>
+              </div>
             </td>
           </tr>
           <tr>
             <td>
               <span class="day">Torsdag</span>
-              <textarea name="torsdag" rows="8" cols="80"><%- week.torsdag%></textarea>
+              <div class="ta-wrapper">
+                <textarea name="torsdag" rows="8" cols="80"><%- week.torsdag%></textarea>
+              </div>
             </td>
           </tr>
           <tr>
             <td>
               <span class="day">Fredag</span>
-              <textarea name="fredag" rows="8" cols="80"><%- week.fredag%></textarea>
+              <div class="ta-wrapper">
+                <textarea name="fredag" rows="8" cols="80"><%- week.fredag%></textarea>
+              </div>
             </td>
           </tr>
           <tr>
             <td>
               <span class="day">Lørdag</span>
-              <textarea name="lordag" rows="8" cols="80"><%- week.lordag%></textarea>
+              <div class="ta-wrapper">
+                <textarea name="lordag" rows="8" cols="80"><%- week.lordag%></textarea>
+              </div>
             </td>
           </tr>
           <tr>
             <td>
               <span class="day">Søndag</span>
-              <textarea name="sondag" rows="8" cols="80"><%- week.sondag%></textarea>
+              <div class="ta-wrapper">
+                <textarea name="sondag" rows="8" cols="80"><%- week.sondag%></textarea>
+              </div>
             </td>
           </tr>
         </tbody>
