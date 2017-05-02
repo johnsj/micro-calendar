@@ -3,6 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Ugeplan</title>
+    <!-- Include external CSS. -->
+    <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css"> -->
+
+    <!-- Include Editor style. -->
+    <link href="/bower_components/froala-wysiwyg-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <link href="/bower_components/froala-wysiwyg-editor/css/froala_style.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
@@ -75,5 +82,25 @@
         </tbody>
       </table>
     </form>
+    <!-- Include external JS libs. -->
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/mode/xml/xml.min.js"></script> -->
+
+    <!-- Include Editor JS files. -->
+    <script type="text/javascript" src="/bower_components/froala-wysiwyg-editor/js/froala_editor.pkgd.min.js"></script>
+
+    <!-- Initialize the editor. -->
+    <script type="text/javascript">
+      // $(function() { $('textarea').froalaEditor() });
+      $(function() {
+        $('textarea').froalaEditor({
+           // Set custom buttons with separator between them.
+          //  toolbarButtons: ['undo', 'redo' , '|', 'bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', 'outdent', 'indent', 'clearFormatting', 'insertTable', 'html'],
+           toolbarButtons: ['undo', 'redo' , '|', 'bold', 'italic', 'underline', 'strikeThrough', 'outdent', 'indent', 'clearFormatting', 'insertTable', 'html'],
+           toolbarButtonsXS: ['undo', 'redo' , '-', 'bold', 'italic', 'underline']
+       })
+      });
+    </script>
   </body>
 </html>
