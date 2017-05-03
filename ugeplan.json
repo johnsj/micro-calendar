@@ -1,9 +1,0 @@
-{
-  "mandag": "<p><em>*test 1 <strong>test&nbsp;</strong>2*</em></p>",
-  "tirsdag": "<p>afhente ting og &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sager</p>",
-  "onsdag": "<p>3 &nbsp; &nbsp; &nbsp; virker &nbsp;&nbsp;</p>",
-  "torsdag": "<p>4 &nbsp; &nbsp; &nbsp; at gemme</p>",
-  "fredag": "<p>5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;flere</p>",
-  "lordag": "<p>6 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;på &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;en</p>",
-  "sondag": "<p>7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; gang</p>"
-}
