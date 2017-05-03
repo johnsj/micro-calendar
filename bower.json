@@ -16,7 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^3.2.1",
-    "froala-wysiwyg-editor": "^2.5.1"
+    "jquery": "^3.2.1"
   }
 }

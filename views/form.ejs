@@ -84,23 +84,27 @@
     </form>
     <!-- Include external JS libs. -->
     <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/nicEdit.js"></script>
+    <script type="text/javascript">
+      bkLib.onDomLoaded(nicEditors.allTextAreas);
+    </script>
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.js"></script> -->
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/mode/xml/xml.min.js"></script> -->
 
     <!-- Include Editor JS files. -->
-    <script type="text/javascript" src="/bower_components/froala-wysiwyg-editor/js/froala_editor.pkgd.min.js"></script>
+    <!-- <script type="text/javascript" src="/bower_components/froala-wysiwyg-editor/js/froala_editor.pkgd.min.js"></script> -->
 
     <!-- Initialize the editor. -->
     <script type="text/javascript">
       // $(function() { $('textarea').froalaEditor() });
-      $(function() {
-        $('textarea').froalaEditor({
-           // Set custom buttons with separator between them.
-          //  toolbarButtons: ['undo', 'redo' , '|', 'bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', 'outdent', 'indent', 'clearFormatting', 'insertTable', 'html'],
-           toolbarButtons: ['undo', 'redo' , '|', 'bold', 'italic', 'underline', 'strikeThrough', 'outdent', 'indent', 'clearFormatting', 'insertTable', 'html'],
-           toolbarButtonsXS: ['undo', 'redo' , '-', 'bold', 'italic', 'underline']
-       })
-      });
+      // $(function() {
+      //   $('textarea').froalaEditor({
+      //      // Set custom buttons with separator between them.
+      //     //  toolbarButtons: ['undo', 'redo' , '|', 'bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', 'outdent', 'indent', 'clearFormatting', 'insertTable', 'html'],
+      //      toolbarButtons: ['undo', 'redo' , '|', 'bold', 'italic', 'underline', 'strikeThrough', 'outdent', 'indent', 'clearFormatting', 'insertTable', 'html'],
+      //      toolbarButtonsXS: ['undo', 'redo' , '-', 'bold', 'italic', 'underline']
+      //  })
+      // });
     </script>
   </body>
 </html>
