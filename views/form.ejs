@@ -10,70 +10,101 @@
     <!-- Include Editor style. -->
     <link href="/bower_components/froala-wysiwyg-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
     <link href="/bower_components/froala-wysiwyg-editor/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/bower_components/jquery-ui/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
     <h1 class="title">Uge Plan</h1>
-    <form class="" action="/save" method="post">
-      <input type="submit" value="Gem">
+    <div class="wrapper">
+      <form class="" action="/save" method="post">
       <table class="week">
         <thead>
           <tr>
+            <td><input type="submit" value="Gem"></td>
             <td>Uge: <%- weeknumber %></td>
+            <td></td>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>
+            <td colspan="3">
               <span class="day">Mandag</span>
+              <div class="ta-wrapper center dateInput">
+                <label for="">Dato:</label>
+                <input class="datepicker" type="text" name="mandagDato" value="<%- week.mandagDato%>">
+              </div>
               <div class="ta-wrapper">
                 <textarea name="mandag" rows="8" cols="80"><%- week.mandag%></textarea>
               </div>
             </td>
           </tr>
           <tr>
-            <td>
+            <td colspan="3">
               <span class="day">Tirsdag</span>
+              <div class="ta-wrapper center dateInput">
+                <label for="">Dato:</label>
+                <input class="datepicker" type="text" name="tirsdagDato" value="<%- week.tirdagDato%>">
+              </div>
               <div class="ta-wrapper">
                 <textarea name="tirsdag" rows="8" cols="80"><%- week.tirsdag%></textarea>
               </div>
             </td>
           </tr>
           <tr>
-            <td>
+            <td colspan="3">
               <span class="day">Onsdag</span>
+              <div class="ta-wrapper center dateInput">
+                <label for="">Dato:</label>
+                <input class="datepicker" type="text" name="onsdagDato" value="<%- week.onsdagDato%>">
+              </div>
               <div class="ta-wrapper">
                 <textarea name="onsdag" rows="8" cols="80"><%- week.onsdag%></textarea>
               </div>
             </td>
           </tr>
           <tr>
-            <td>
+            <td colspan="3">
               <span class="day">Torsdag</span>
+              <div class="ta-wrapper center dateInput">
+                <label for="">Dato:</label>
+                <input class="datepicker" type="text" name="torsdagDato" value="<%- week.torsdagDato%>">
+              </div>
               <div class="ta-wrapper">
                 <textarea name="torsdag" rows="8" cols="80"><%- week.torsdag%></textarea>
               </div>
             </td>
           </tr>
           <tr>
-            <td>
+            <td colspan="3">
               <span class="day">Fredag</span>
+              <div class="ta-wrapper center dateInput">
+                <label for="">Dato:</label>
+                <input class="datepicker" type="text" name="fredagDato" value="<%- week.fredagDato%>">
+              </div>
               <div class="ta-wrapper">
                 <textarea name="fredag" rows="8" cols="80"><%- week.fredag%></textarea>
               </div>
             </td>
           </tr>
           <tr>
-            <td>
+            <td colspan="3">
               <span class="day">Lørdag</span>
+              <div class="ta-wrapper center dateInput">
+                <label for="">Dato:</label>
+                <input class="datepicker" type="text" name="lordagDato" value="<%- week.lordagDato%>">
+              </div>
               <div class="ta-wrapper">
                 <textarea name="lordag" rows="8" cols="80"><%- week.lordag%></textarea>
               </div>
             </td>
           </tr>
           <tr>
-            <td>
+            <td colspan="3">
               <span class="day">Søndag</span>
+              <div class="ta-wrapper center dateInput">
+                <label for="">Dato:</label>
+                <input class="datepicker" type="text" name="sondagDato" value="<%- week.sondagDato%>">
+              </div>
               <div class="ta-wrapper">
                 <textarea name="sondag" rows="8" cols="80"><%- week.sondag%></textarea>
               </div>
@@ -82,8 +113,12 @@
         </tbody>
       </table>
     </form>
+    </div>
+
     <!-- Include external JS libs. -->
     <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/bower_components/jquery-ui/ui/i18n/datepicker-da.js"></script>
     <script type="text/javascript" src="/js/nicEdit.js"></script>
     <script type="text/javascript">
       bkLib.onDomLoaded(nicEditors.allTextAreas);
@@ -96,6 +131,10 @@
 
     <!-- Initialize the editor. -->
     <script type="text/javascript">
+      $('.datepicker').datepicker({
+        showButtonPanel: true
+      })
+
       // $(function() { $('textarea').froalaEditor() });
       // $(function() {
       //   $('textarea').froalaEditor({
