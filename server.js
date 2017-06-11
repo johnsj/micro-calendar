@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const jsonfile = require('jsonfile');
 
-const jsonfileName = "./ugeplan.json";
+const jsonfileName = "ugeplan.json";
 
 app.set('views', './views');
 app.set('view engine', 'ejs');
